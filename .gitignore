@@ -1,1 +1,6 @@
-Log_File.logs
+*.logs
+.classpath
+bin/
+.project
+.settings
+test-output/
