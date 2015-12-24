@@ -34,7 +34,6 @@ public class Login {
 				.configure("D:\\Auto_Ajoy\\MainProject\\src\\Loggers\\log4j.properties");
 		Logger log = Logger.getLogger("Log_File.logs");
 		log.info("Testing has been started");
-		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		File file = new File(
@@ -63,7 +62,7 @@ public class Login {
 		Login_Page.Click_LogIn(driver).click();
 
 		System.out
-				.println(" Login Successfully, now it is the time to Log Off buddy.");
+				.println(" Login Successfully, now it is the time to shop buddy");
 
 	}
 

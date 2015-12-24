@@ -2,7 +2,9 @@
 <suite name="Suite"> //here parallel="tests" means run both the test in parallel and thread-count="2" means run two test cases parallel.  
   <test name="WishList">
      <classes> 
-                    <class name="TestSuites.WishList"/>   //here hello is package name and ParallelExecution is class name  
-   </classes>
+                    <class name="TestSuites.WishList"/> 
+                    <class name="TestSuites.FirstShop"/> 
+                    <class name="TestSuites.Login"/> 
+                      </classes>
    </test>
   </suite> 

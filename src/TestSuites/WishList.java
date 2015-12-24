@@ -1,25 +1,29 @@
 package TestSuites;
 
-import java.util.Properties;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import PageObjects.NewWishlist;
+import TestData.FirstDP;
 
-public class WishList extends Login {
+public class WishList{
+	WebDriver driver = Login.getDriver();
 	@Test
-	public void wishlist() {
+	public void clickwishlist()
+	{
+		NewWishlist.Click_Wishlist(driver).click();
+	}
+	
+	
+	@Test(dataProvider="SearchProvider",dataProviderClass=FirstDP.class)
+	public void wishlist(String username) {
 		System.out.println("Inside Wishlist");
 		// Properties prop=Login.getProp();
-		WebDriver driver = Login.getDriver();
-		driver.findElement(
-				By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/ul/li/a/span"))
-				.click();
 		// NewWishlist.Enter_Name(driver).sendKeys(prop.getProperty("username"));
-		NewWishlist.Enter_Name(driver).sendKeys("username");
+		NewWishlist.Enter_Name(driver).sendKeys(username);
 		NewWishlist.Submit_WishList(driver).click();
+		NewWishlist.Enter_Name(driver).clear();
+		System.out.println("Shopping is done now lets move to logout");
 
 	}
 }

@@ -10,6 +10,13 @@ public class NewWishlist {
 	 * @param args
 	 */
 	private static WebElement element = null;
+	public static WebElement Click_Wishlist(WebDriver driver)
+	{
+		element=driver.findElement(
+				By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/ul/li/a/span"));
+		return element;
+	}
+	
 	public static WebElement Enter_Name(WebDriver driver){
 		 
         element = driver.findElement(By.id("name"));

@@ -8,14 +8,13 @@ import org.testng.annotations.AfterTest;
 import PageObjects.Home_Page;
 
 public class Logout {
-	private static WebDriver driver = null;
+	WebDriver driver = Login.getDriver();
 	@AfterTest
-	public static void main(String[] args) throws IOException {
+	public void loguout() throws IOException {
 		System.out.println("Inside Logout");
 		Home_Page.Click_LogOut(driver).click();
 		System.out.println(" Logout Successfull");
-
-		driver.quit();
+//		driver.close();
 
 	}
 }
