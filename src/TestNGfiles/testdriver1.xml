@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite"> //here parallel="tests" means run both the test in parallel and thread-count="2" means run two test cases parallel.  
+  <test name="WishList">
+     <classes> 
+                    <class name="TestSuites.PersonalInfo"/> 
+                    <class name="TestSuites.Login"/> 
+                    </classes>
+   </test>
+  </suite> 
