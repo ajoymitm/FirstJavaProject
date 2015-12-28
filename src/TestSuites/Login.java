@@ -28,7 +28,7 @@ public class Login {
 		Login.driver = driver;
 	}
 	@BeforeTest
-	public static void test() throws IOException {
+	public static void login() throws IOException {
 		System.out.println("Inside Login");
 		PropertyConfigurator
 				.configure("D:\\Auto_Ajoy\\MainProject\\src\\Loggers\\log4j.properties");
