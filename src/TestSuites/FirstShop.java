@@ -1,7 +1,5 @@
 package TestSuites;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -10,7 +8,7 @@ import org.testng.annotations.Test;
 import PageObjects.FirstShop_Page;
 
 
-public class FirstShop extends Login {
+public class FirstShop{
 	WebDriver driver=Login.getDriver();
   @Test(priority=1)
     public void click_image() {
@@ -26,8 +24,8 @@ public class FirstShop extends Login {
   {
 	  FirstShop_Page.Popup_Close(driver).click();
   }
-  @Test(priority=4,groups="shop", dependsOnMethods={"login"})
-  public void select_quantity()throws IOException
+  @Test(priority=4,groups="shop")
+  public void select_quantity()
   {
 	  FirstShop_Page.Choose_Quantity(driver).sendKeys("2");
   }

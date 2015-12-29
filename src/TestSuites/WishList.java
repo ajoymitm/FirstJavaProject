@@ -15,7 +15,7 @@ public class WishList{
 	}
 	
 	
-	@Test(dataProvider="SearchProvider",dataProviderClass=FirstDP.class)
+	@Test(dataProvider="SearchProvider",dataProviderClass=FirstDP.class,priority=0)
 	public void wishlist(String username) {
 		System.out.println("Inside Wishlist");
 		// Properties prop=Login.getProp();

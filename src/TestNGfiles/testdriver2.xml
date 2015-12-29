@@ -2,9 +2,8 @@
 <suite name="Suite">  
   <test name="OrderHistory">
      <classes> 
-                    <class name="TestSuites.OrderHistory"/> 
-                    <class name="TestSuites.FirstShop"/> 
                     <class name="TestSuites.Login"/> 
+                    <class name="TestSuites.OrderHistory"/> 
                       </classes>
    </test>
   </suite> 

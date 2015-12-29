@@ -3,8 +3,7 @@
   <test name="WishList">
    <classes> 
                     <class name="TestSuites.Login"/> 
-                    <class name="TestSuites.WishList"/> 
-                    <class name="TestSuites.FirstShop"/> 
-                                                                                               </classes>
+                    <class name="TestSuites.MyAddress"/> 
+                                                                                                                  </classes>
       </test>
   </suite> 
