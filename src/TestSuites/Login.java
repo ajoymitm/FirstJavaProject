@@ -8,9 +8,12 @@ import java.util.concurrent.TimeUnit;
 
 import junit.framework.Assert;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeSuite;
@@ -75,7 +78,7 @@ public class Login {
 				.sendKeys(prop.getProperty("password"));
     }
 	@Test(groups="login",priority=4)
-    public void click_login()
+    public void click_login() throws IOException
     {
 		Login_Page.Click_LogIn(driver).click();
 		System.out
@@ -83,6 +86,8 @@ public class Login {
 		String title=driver.getTitle();
 		System.out.println(title);
 		Assert.assertEquals("My account - My Store", title);
+		File src =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C:\\Users\\ajoyb\\Desktop\\ajoymitm\\MainProject\\src\\Screenshots\\loginsucess.png"));
     }
 
 		
