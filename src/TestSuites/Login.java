@@ -6,8 +6,11 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import junit.framework.Assert;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeSuite;
@@ -18,7 +21,7 @@ import PageObjects.Login_Page;
 
 public class Login {
 	private static Properties prop = new Properties();
-
+	private static Logger log = Logger.getLogger(Login.class);
 	private static WebDriver driver = new FirefoxDriver();
 	public static void setDriver(WebDriver driver) {
 		Login.driver = driver;
@@ -27,10 +30,11 @@ public class Login {
 		public static void login() throws IOException 
 	{
 		System.out.println("Inside Login");
-		PropertyConfigurator
-				.configure("D:\\Auto_Ajoy\\MainProject\\src\\Loggers\\log4j.properties");
-		Logger log = Logger.getLogger("Log_File.logs");
-		log.info("Testing has been started");
+		DOMConfigurator.configure("C:\\Users\\ajoyb\\Desktop\\ajoymitm\\MainProject\\src\\Loggers\\log4j-config.xml");
+		log.debug("Log4j appender configuration is successful !!");
+//		PropertyConfigurator
+//				.configure("D:\\Auto_Ajoy\\MainProject\\src\\Loggers\\log4j.properties");
+				log.info("Testing has been started");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		File file = new File(
@@ -76,10 +80,13 @@ public class Login {
 		Login_Page.Click_LogIn(driver).click();
 		System.out
 		.println(" Login Successfully, now it is the time to shop buddy");
+		String title=driver.getTitle();
+		System.out.println(title);
+		Assert.assertEquals("My account - My Store", title);
     }
 
 		
-
+	
 
 		public static Properties getProp() {
 		return prop;
