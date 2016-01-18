@@ -9,12 +9,13 @@ public class MyAddress_Page {
 	public static WebElement Delete_Address(WebDriver driver){
 
 		element = driver.findElement(By.xpath("//div[@id='center_column']/div/div/div/ul/li[9]/a[2]/span"));
-
+		//element = driver.findElement(By.cssSelector(".btn.btn-default.button.button-small span"));
+		
 		return element;
 		}
 	public static WebElement Click_Address(WebDriver driver) {
 		element = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[1]/ul/li[3]/a/span"));
-
+		//driver.findElement(By.cssSelector(".myaccount-link-list>li>a>span"));
 		return element;
 		
 			}
@@ -46,7 +47,7 @@ public class MyAddress_Page {
 		return element;
 	}
 	public static WebElement Enter_Postal(WebDriver driver) {
-		element = driver.findElement(By.cssSelector("#postal"));
+		element = driver.findElement(By.cssSelector("#postcode"));
 		return element;
 	}
 }
