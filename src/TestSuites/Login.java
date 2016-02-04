@@ -31,13 +31,13 @@ public class Login {
 	public static void test() throws IOException {
 		System.out.println("Inside Login");
 		PropertyConfigurator
-				.configure("D:\\Auto_Ajoy\\MainProject\\src\\Loggers\\log4j.properties");
+				.configure("E:\\Auto\\FirstProject\\src\\Loggers\\log4j.properties");
 		Logger log = Logger.getLogger("Log_File.logs");
 		log.info("Testing has been started");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		File file = new File(
-				"D:\\Auto_Ajoy\\MainProject\\src\\Config\\config.properties");
+				"E:\\Auto\\FirstProject\\src\\Config\\config.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);
