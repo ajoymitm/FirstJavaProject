@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">  
+  <test name="OrderHistory">
+     <classes> 
+                    <class name="TestSuites.Login"/> 
+                    <class name="TestSuites.OrderHistory"/> 
+                      </classes>
+   </test>
+  </suite> 
+

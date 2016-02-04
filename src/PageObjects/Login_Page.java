@@ -1,5 +1,7 @@
 package PageObjects;
 
+import junit.framework.Assert;
+
 import org.openqa.selenium.*;
 
 import org.openqa.selenium.WebDriver;
@@ -33,5 +35,12 @@ public class Login_Page {
          return element;
  
          }
+
+	public static void Verify_LogIn(WebDriver driver) {
+		String title=driver.getTitle();
+		System.out.println("Actual Title is" +title);
+		Assert.assertEquals("My Store", title);
+		
+	}
  
 }

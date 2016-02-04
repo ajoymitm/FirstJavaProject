@@ -44,7 +44,7 @@ public class FirstShop_Page {
 	}
 
 		public static WebElement click_add_to_cart(WebDriver driver) {
-			element = driver.findElement(By.xpath("//button[@name='Submit']"));
+			element = driver.findElement(By.cssSelector("button.exclusive"));
 
 			return element;
 			
@@ -62,7 +62,7 @@ public class FirstShop_Page {
 		}
 
 		public static WebElement click_on_cart(WebDriver driver) {
-			element = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[3]/div/a/b"));
+			element = driver.findElement(By.cssSelector(".shopping_cart>a>b"));
 			return element;
 		}
 	}
